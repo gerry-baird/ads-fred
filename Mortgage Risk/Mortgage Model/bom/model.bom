@@ -1,5 +1,55 @@
 
 
+public class ApplicantDetails
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "ApplicantDetails"
+        property "de.generated" "true"
+{
+    public java.lang.Long age
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "age"
+                property update "true";
+    public java.lang.Long creditScore
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "creditScore"
+                property update "true";
+    public java.lang.Long dependants
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "dependants"
+                property update "true";
+    public java.lang.Long employmentLength
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "employmentLength"
+                property update "true";
+    public java.lang.Long income
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "income"
+                property update "true";
+    public java.lang.Long loan
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "loan"
+                property update "true";
+    public java.lang.Long missedPayments
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "missedPayments"
+                property update "true";
+    public java.lang.Long propertyValue
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "propertyValue"
+                property update "true";
+    public java.lang.Long term
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "term"
+                property update "true";
+    public ApplicantDetails(java.lang.Long age, java.lang.Long creditScore, java.lang.Long dependants, java.lang.Long employmentLength, java.lang.Long income, java.lang.Long loan, java.lang.Long missedPayments, java.lang.Long propertyValue, java.lang.Long term)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public ApplicantDetails()
+                property "dataio.default" "true";
+}
+
 public class MortgageDefaultPrediction
         property "ads.typeId" "1"
         property "com.fasterxml.jackson.annotation.JsonTypeName" "MortgageDefaultPrediction"

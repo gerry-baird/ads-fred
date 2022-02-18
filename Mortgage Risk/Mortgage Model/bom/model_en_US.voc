@@ -1,4 +1,44 @@
 
+# ApplicantDetails
+ApplicantDetails#concept.label = Applicant Details
+ApplicantDetails.ApplicantDetails(java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long)#phrase.navigation = a new {Applicant Details} where {0, age} {1, credit score} {2, dependants} {3, employment length} {4, income} {5, loan} {6, missed payments} {7, property value} {8, term}
+ApplicantDetails.age#phrase.action = set the age of {this} to {age}
+ApplicantDetails.age#phrase.addition_setter = add {age} to the age of {this}
+ApplicantDetails.age#phrase.navigation = {age} of {this}
+ApplicantDetails.age#phrase.subtraction_setter = subtract {age} from the age of {this}
+ApplicantDetails.creditScore#phrase.action = set the credit score of {this} to {credit score}
+ApplicantDetails.creditScore#phrase.addition_setter = add {credit score} to the credit score of {this}
+ApplicantDetails.creditScore#phrase.navigation = {credit score} of {this}
+ApplicantDetails.creditScore#phrase.subtraction_setter = subtract {credit score} from the credit score of {this}
+ApplicantDetails.dependants#phrase.action = set the dependants of {this} to {dependants}
+ApplicantDetails.dependants#phrase.addition_setter = add {dependants} to the dependants of {this}
+ApplicantDetails.dependants#phrase.navigation = {dependants} of {this}
+ApplicantDetails.dependants#phrase.subtraction_setter = subtract {dependants} from the dependants of {this}
+ApplicantDetails.employmentLength#phrase.action = set the employment length of {this} to {employment length}
+ApplicantDetails.employmentLength#phrase.addition_setter = add {employment length} to the employment length of {this}
+ApplicantDetails.employmentLength#phrase.navigation = {employment length} of {this}
+ApplicantDetails.employmentLength#phrase.subtraction_setter = subtract {employment length} from the employment length of {this}
+ApplicantDetails.income#phrase.action = set the income of {this} to {income}
+ApplicantDetails.income#phrase.addition_setter = add {income} to the income of {this}
+ApplicantDetails.income#phrase.navigation = {income} of {this}
+ApplicantDetails.income#phrase.subtraction_setter = subtract {income} from the income of {this}
+ApplicantDetails.loan#phrase.action = set the loan of {this} to {loan}
+ApplicantDetails.loan#phrase.addition_setter = add {loan} to the loan of {this}
+ApplicantDetails.loan#phrase.navigation = {loan} of {this}
+ApplicantDetails.loan#phrase.subtraction_setter = subtract {loan} from the loan of {this}
+ApplicantDetails.missedPayments#phrase.action = set the missed payments of {this} to {missed payments}
+ApplicantDetails.missedPayments#phrase.addition_setter = add {missed payments} to the missed payments of {this}
+ApplicantDetails.missedPayments#phrase.navigation = {missed payments} of {this}
+ApplicantDetails.missedPayments#phrase.subtraction_setter = subtract {missed payments} from the missed payments of {this}
+ApplicantDetails.propertyValue#phrase.action = set the property value of {this} to {property value}
+ApplicantDetails.propertyValue#phrase.addition_setter = add {property value} to the property value of {this}
+ApplicantDetails.propertyValue#phrase.navigation = {property value} of {this}
+ApplicantDetails.propertyValue#phrase.subtraction_setter = subtract {property value} from the property value of {this}
+ApplicantDetails.term#phrase.action = set the term of {this} to {term}
+ApplicantDetails.term#phrase.addition_setter = add {term} to the term of {this}
+ApplicantDetails.term#phrase.navigation = {term} of {this}
+ApplicantDetails.term#phrase.subtraction_setter = subtract {term} from the term of {this}
+
 # MortgageDefaultPrediction
 MortgageDefaultPrediction#concept.label = Mortgage Default Prediction
 MortgageDefaultPrediction.MortgageDefaultPrediction(boolean,double)#phrase.navigation = a new {Mortgage Default Prediction} where {0, default predicted} {1, probability}

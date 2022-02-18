@@ -7,38 +7,38 @@
     <extensionElements>
         <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
     </extensionElements>
-    <inputData id="node_0" name="Input">
+    <inputData id="node_0" name="applicant">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.String" collection="false" name="Input"/>
+                <output bomType="ApplicantDetails" collection="false" name="applicant"/>
             </initialization>
         </extensionElements>
-        <variable id="node_0_ii" name="Input" typeRef="java.lang.String"/>
+        <variable id="node_0_ii" name="applicant" typeRef="ApplicantDetails"/>
     </inputData>
     <decision id="node_1" name="Decision">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="java.lang.String" collection="false" name="Input"/>
-                <output bomType="java.lang.String" collection="false" name="Decision"/>
-                <rule defaultRule="false" href="node_1/Test.drl" kind="BusinessRule" name="Test"/>
+                <input bomType="ApplicantDetails" collection="false" name="applicant"/>
+                <output bomType="MortgageDefaultPrediction" collection="false" name="Decision"/>
+                <rule defaultRule="false" href="node_1/Call%20Predicitve%20Model.drl" kind="BusinessRule" name="Call Predicitve Model"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Decision" typeRef="java.lang.String"/>
+        <variable id="node_1_ii" name="Decision" typeRef="MortgageDefaultPrediction"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
         </informationRequirement>
         <knowledgeRequirement>
-            <requiredKnowledge href="#node_3"/>
+            <requiredKnowledge href="#node_2"/>
         </knowledgeRequirement>
     </decision>
-    <businessKnowledgeModel id="node_3" name="Mortgage Default Predictor">
+    <businessKnowledgeModel id="node_2" name="Mortgage Default Predictor">
         <extensionElements>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
                 <property name="ads.designer.bkKind"><![CDATA[prediction]]></property>
             </properties>
         </extensionElements>
-        <variable name="Mortgage Default Predictor" typeRef="cpadmin.gb_sandpit.mortgage_risk.mortgageDefaultPredictor.Output"/>
-        <encapsulatedLogic typeRef="cpadmin.gb_sandpit.mortgage_risk.mortgageDefaultPredictor.Output">
+        <variable name="Mortgage Default Predictor" typeRef="MortgageDefaultPrediction"/>
+        <encapsulatedLogic typeRef="MortgageDefaultPrediction">
             <formalParameter name="age" typeRef="java.lang.Long"/>
             <formalParameter name="creditScore" typeRef="java.lang.Long"/>
             <formalParameter name="dependants" typeRef="java.lang.Long"/>

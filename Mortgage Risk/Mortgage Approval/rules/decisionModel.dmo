@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>83a9700b-a72f-4e23-9189-f3fa1ef44cf0</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Input">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Input"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Input" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="node_1" name="Decision">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Input"/>
+                <output bomType="java.lang.String" collection="false" name="Decision"/>
+                <rule defaultRule="false" href="node_1/Test.drl" kind="BusinessRule" name="Test"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Decision" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_3"/>
+        </knowledgeRequirement>
+    </decision>
+    <businessKnowledgeModel id="node_3" name="Mortgage Default Predictor">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[prediction]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Mortgage Default Predictor" typeRef="cpadmin.gb_sandpit.mortgage_risk.mortgageDefaultPredictor.Output"/>
+        <encapsulatedLogic typeRef="cpadmin.gb_sandpit.mortgage_risk.mortgageDefaultPredictor.Output">
+            <formalParameter name="age" typeRef="java.lang.Long"/>
+            <formalParameter name="creditScore" typeRef="java.lang.Long"/>
+            <formalParameter name="dependants" typeRef="java.lang.Long"/>
+            <formalParameter name="empLength" typeRef="java.lang.Long"/>
+            <formalParameter name="income" typeRef="java.lang.Long"/>
+            <formalParameter name="loan" typeRef="java.lang.Long"/>
+            <formalParameter name="missedPayments" typeRef="java.lang.Long"/>
+            <formalParameter name="propertyValue" typeRef="java.lang.Long"/>
+            <formalParameter name="term" typeRef="java.lang.Long"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"cpadmin.gb_sandpit.mortgage_risk.mortgageDefaultPredictor.Mortgage_Default_Predictor"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

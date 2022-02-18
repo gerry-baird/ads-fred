@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Output Mapping</name>
+  <uuid>099df079-1275-45c1-85ae-b5f5dbd9436f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+set decision to a new Mortgage Default Prediction where
+		default predicted is 'Default Predicted' , 
+		the probability is Probability ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

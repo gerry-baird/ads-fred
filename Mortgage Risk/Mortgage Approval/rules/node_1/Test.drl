@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Test</name>
+  <uuid>64a734b1-d4d5-4f70-aa06-d4b3814a14ed</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[ set decision to the mortgage default predictor computed from
+      age being 50, 
+      credit score being <credit score>, 
+      dependants being <dependants>, 
+      emp length being <emp length>, 
+      income being <income>, 
+      loan being <loan>, 
+      missed payments being <missed payments>, 
+      property value being <property value>, 
+      term being <term> ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

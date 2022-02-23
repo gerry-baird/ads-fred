@@ -1,9 +1,10 @@
 {
   "metadata" : {
-    "id" : "e372ea58-32ad-4c31-8ef6-f107aaeb0f1e",
-    "name" : "Mortgage Risk - P1 Gradient Boosting Classifier",
-    "modified_at" : "2022-02-18T14:14:22.432Z",
-    "created_at" : "2022-02-18T14:14:22.137Z",
+    "id" : "afd24d4a-bcce-4537-be6b-39bfc352c24c",
+    "name" : "Mortgage Risk - P2 Gradient Boosting Classifier",
+    "description" : "Wed 23rd Feb",
+    "modified_at" : "2022-02-23T12:48:58.009Z",
+    "created_at" : "2022-02-23T12:48:57.618Z",
     "owner" : "IBMid-27000280C5",
     "space_id" : "31b44df7-2390-4375-88a2-65427c2faa6a"
   },
@@ -11,10 +12,10 @@
     "label_column" : "default",
     "content_import_state" : "completed",
     "metrics" : [ {
-      "timestamp" : "2022-02-18T14:12:16.000Z",
+      "timestamp" : "2022-02-23T12:07:51.000Z",
       "ml_metrics" : { },
       "context" : {
-        "phase" : "pre_hpo_d_output"
+        "phase" : "hpo_d_output"
       }
     } ],
     "type" : "wml-hybrid_0.1",
@@ -54,7 +55,7 @@
           "type" : "integer",
           "nullable" : true
         }, {
-          "name" : "credit score",
+          "name" : "credit_score",
           "type" : "integer",
           "nullable" : true
         } ]
@@ -62,8 +63,9 @@
       "output" : [ ]
     }
   },
-  "id" : "e372ea58-32ad-4c31-8ef6-f107aaeb0f1e",
-  "name" : "Mortgage Risk - P1 Gradient Boosting Classifier",
-  "trainedAt" : "2022-02-18T14:14:22.137Z",
-  "modifiedAt" : "2022-02-18T14:14:22.432Z"
+  "id" : "afd24d4a-bcce-4537-be6b-39bfc352c24c",
+  "name" : "Mortgage Risk - P2 Gradient Boosting Classifier",
+  "description" : "Wed 23rd Feb",
+  "trainedAt" : "2022-02-23T12:48:57.618Z",
+  "modifiedAt" : "2022-02-23T12:48:58.009Z"
 }

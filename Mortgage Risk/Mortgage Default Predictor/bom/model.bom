@@ -23,7 +23,7 @@ public class Error
 
 public class Input
         property "ads.typeId" "1"
-        property "com.fasterxml.jackson.annotation.JsonPropertyOrder" "{income,loan,property_value,term,emp_length,dependants,age,missed_payments,credit score}"
+        property "com.fasterxml.jackson.annotation.JsonPropertyOrder" "{income,loan,property_value,term,emp_length,dependants,age,missed_payments,credit_score}"
         property "de.generated" "true"
 {
     public java.lang.Long age
@@ -31,7 +31,7 @@ public class Input
                 property "com.fasterxml.jackson.annotation.JsonProperty" "age";
     public java.lang.Long creditScore
                 property "ads.attributeId" "9"
-                property "com.fasterxml.jackson.annotation.JsonProperty" "credit score";
+                property "com.fasterxml.jackson.annotation.JsonProperty" "credit_score";
     public java.lang.Long dependants
                 property "ads.attributeId" "6"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "dependants";
@@ -106,7 +106,7 @@ public class Output
                 property "de.generated" {
                     $gen "com.ibm.decision.ml.integration.xom.PredictionRunGenerator",
                     $target "BOM",
-                    providerInfoId "cpadmin/GB-Sandpit/GB ML Deployments1645192952195e55e2f9d-0135-4a66-8907-c0075dddaf59"
+                    providerInfoId "cpadmin/GB-Sandpit/GB ML Deployments1645192952195061f1675-1d17-40a8-b434-7fad743c9e8f"
                 }
                 property pureFunction "true";
     public void set_probability(java.util.Collection probability domain 0,* class java.lang.Double)

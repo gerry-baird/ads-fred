@@ -41,9 +41,9 @@
     "nullable" : true,
     "jsonName" : "missed_payments"
   }, {
-    "name" : "credit score",
+    "name" : "credit_score",
     "type" : "integer",
     "nullable" : true,
-    "jsonName" : "credit score"
+    "jsonName" : "credit_score"
   } ]
 }

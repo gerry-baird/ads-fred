@@ -1,28 +1,30 @@
 {
   "metadata" : {
-    "id" : "e55e2f9d-0135-4a66-8907-c0075dddaf59",
-    "name" : "Mortgage Risk Gradient Boosted",
-    "modified_at" : "2022-02-18T14:14:59.424Z",
-    "created_at" : "2022-02-18T14:14:59.424Z",
+    "id" : "061f1675-1d17-40a8-b434-7fad743c9e8f",
+    "name" : "Mortgage Risk - P2 Gradient Boosting Classifier",
+    "description" : "Predicts the probability of a mortgage default",
+    "modified_at" : "2022-02-23T12:50:54.981Z",
+    "created_at" : "2022-02-23T12:50:54.981Z",
     "owner" : "IBMid-27000280C5",
     "space_id" : "31b44df7-2390-4375-88a2-65427c2faa6a"
   },
   "entity" : {
-    "name" : "Mortgage Risk Gradient Boosted",
+    "name" : "Mortgage Risk - P2 Gradient Boosting Classifier",
     "space_id" : "31b44df7-2390-4375-88a2-65427c2faa6a",
     "custom" : { },
     "online" : { },
+    "description" : "Predicts the probability of a mortgage default",
     "status" : {
       "state" : "ready",
       "online_url" : {
-        "url" : "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/e55e2f9d-0135-4a66-8907-c0075dddaf59/predictions"
+        "url" : "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/061f1675-1d17-40a8-b434-7fad743c9e8f/predictions"
       }
     },
     "asset" : {
-      "id" : "e372ea58-32ad-4c31-8ef6-f107aaeb0f1e"
+      "id" : "afd24d4a-bcce-4537-be6b-39bfc352c24c"
     }
   },
-  "name" : "Mortgage Risk Gradient Boosted",
+  "name" : "Mortgage Risk - P2 Gradient Boosting Classifier",
   "status" : "ready",
-  "deployedAt" : "2022-02-18T14:14:59.424Z"
+  "deployedAt" : "2022-02-23T12:50:54.981Z"
 }

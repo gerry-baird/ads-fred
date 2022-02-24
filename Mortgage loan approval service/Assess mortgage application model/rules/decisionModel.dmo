@@ -10,6 +10,7 @@
     <decision id="node_1" name="Mortgage application">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="MortgageDefaultPrediction" collection="false" name="Default Prediction"/>
                 <input bomType="BusinessApetite" collection="false" name="Business apetite"/>
                 <input bomType="java.lang.Long" collection="false" name="Surplus"/>
                 <output bomType="MortgageApplication" collection="false" name="Mortgage application"/>
@@ -17,6 +18,9 @@
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Mortgage application" typeRef="MortgageApplication"/>
+        <informationRequirement>
+            <requiredInput href="#node_25"/>
+        </informationRequirement>
         <informationRequirement>
             <requiredInput href="#node_13"/>
         </informationRequirement>
@@ -240,5 +244,71 @@
             <requiredInput href="#node_20"/>
         </informationRequirement>
     </decision>
+    <decision id="node_23" name="Update Applicant Score">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Credit score result"/>
+                <input bomType="ApplicantDetails" collection="false" name="applicant details"/>
+                <output bomType="ApplicantDetails" collection="false" name="Update Applicant Score"/>
+                <rule defaultRule="false" href="node_23/Update%20Credit%20Score.drl" kind="BusinessRule" name="Update Credit Score"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_23_ii" name="Update Applicant Score" typeRef="ApplicantDetails"/>
+        <informationRequirement>
+            <requiredInput href="#node_16"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_24"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_24" name="applicant details">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ApplicantDetails" collection="false" name="applicant details"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_24_ii" name="applicant details" typeRef="ApplicantDetails"/>
+    </inputData>
+    <decision id="node_25" name="Default Prediction">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ApplicantDetails" collection="false" name="Update Applicant Score"/>
+                <output bomType="MortgageDefaultPrediction" collection="false" name="Default Prediction"/>
+                <rule defaultRule="false" href="node_25/Get%20prediction.drl" kind="BusinessRule" name="Get prediction"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_25_ii" name="Default Prediction" typeRef="MortgageDefaultPrediction"/>
+        <informationRequirement>
+            <requiredInput href="#node_23"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_26"/>
+        </knowledgeRequirement>
+    </decision>
+    <businessKnowledgeModel id="node_26" name="Mortgage Default Predictor">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[prediction]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Mortgage Default Predictor" typeRef="MortgageDefaultPrediction"/>
+        <encapsulatedLogic typeRef="MortgageDefaultPrediction">
+            <formalParameter name="applicant" typeRef="ApplicantDetails"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"cpadmin.gb_sandpit.mortgage_loan_approval_service.mortgageDefaultPredictor.Mortgage_Default_Predictor"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(ApplicantDetails)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
 </definitions></definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -8,5 +8,16 @@
   "creditScoreExperian": "Excellent",
   "employmentType": "Full-time employment",
   "grossYearlyIncome": 63000,
-  "purchasePrice": 265000
+  "purchasePrice": 265000,
+  "applicantDetails": {
+    "age": 50,
+    "creditScore": 999,
+    "dependants": 0,
+    "empLength": 120,
+    "income": 100000,
+    "loan": 200000,
+    "missedPayments": 0,
+    "propertyValue": 300000,
+    "term": 120
+  }
 }

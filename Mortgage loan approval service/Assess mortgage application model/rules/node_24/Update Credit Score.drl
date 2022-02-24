@@ -5,7 +5,7 @@
   <locale>en_US</locale>
   <definition><![CDATA[set decision to a new Applicant Details where
 		the age is the age of 'applicant details' , 
-		the credit score is 'Credit score result' , 
+		the credit score is 'Credit score result' * 1000, 
 		the dependants is the dependants of 'applicant details' , 
 		the emp length is the emp length of 'applicant details' , 
 		the income is the income of 'applicant details' , 

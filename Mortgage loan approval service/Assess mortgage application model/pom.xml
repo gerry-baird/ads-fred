@@ -43,11 +43,6 @@
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>cpadmin.gb_sandpit.mortgage_loan_approval_service</groupId>
-            <artifactId>mortgageDefaultPredictor</artifactId>
-            <version>LATEST-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>com.ibm.decision</groupId>
             <artifactId>engine-compact-runtime</artifactId>
         </dependency>

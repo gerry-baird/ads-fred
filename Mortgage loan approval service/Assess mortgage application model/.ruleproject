@@ -9,7 +9,6 @@
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
     <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="decisions.mortgage_loan_approval.mortgage_loan_approval_service:mortgageApplication#LATEST-SNAPSHOT" packageId="decisions.mortgage_loan_approval.mortgage_loan_approval_service:mortgageApplication" version="LATEST-SNAPSHOT"/>
-    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="cpadmin.gb_sandpit.mortgage_loan_approval_service:mortgageDefaultPredictor#LATEST-SNAPSHOT" packageId="cpadmin.gb_sandpit.mortgage_loan_approval_service:mortgageDefaultPredictor" version="LATEST-SNAPSHOT"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>

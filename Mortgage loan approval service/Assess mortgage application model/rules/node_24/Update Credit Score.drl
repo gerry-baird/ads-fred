@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Update Credit Score</name>
+  <uuid>927e4dbc-2cfe-40f3-abfd-8b40a69839dd</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Applicant Details where
+		the age is the age of 'applicant details' , 
+		the credit score is 'Credit score result' , 
+		the dependants is the dependants of 'applicant details' , 
+		the emp length is the emp length of 'applicant details' , 
+		the income is the income of 'applicant details' , 
+		the loan is the loan of 'applicant details' , 
+		the missed payments is the missed payments of 'applicant details' , 
+		the property value is the property value of 'applicant details' , 
+		the term is the term of 'applicant details' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>ca13c537-eb04-438f-bb7f-74a6d3a04239</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to 'Property value' * 'LTV ratio';]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,49 @@
+{
+  "id" : "auto_ai_kb_input_schema",
+  "fields" : [ {
+    "name" : "income",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "income"
+  }, {
+    "name" : "loan",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "loan"
+  }, {
+    "name" : "property_value",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "property_value"
+  }, {
+    "name" : "term",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "term"
+  }, {
+    "name" : "emp_length",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "emp_length"
+  }, {
+    "name" : "dependants",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "dependants"
+  }, {
+    "name" : "age",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "age"
+  }, {
+    "name" : "missed_payments",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "missed_payments"
+  }, {
+    "name" : "credit_score",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "credit_score"
+  } ]
+}

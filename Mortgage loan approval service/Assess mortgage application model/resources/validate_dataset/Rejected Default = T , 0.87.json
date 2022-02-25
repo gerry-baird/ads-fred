@@ -16,7 +16,7 @@
     "empLength": 120,
     "income": 100000,
     "loan": 200000,
-    "missedPayments": 3,
+    "missedPayments": 5,
     "propertyValue": 300000,
     "term": 120
   }

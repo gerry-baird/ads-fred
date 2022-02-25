@@ -10,14 +10,17 @@
     <decision id="node_1" name="Mortgage application">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="MortgageDefaultPrediction" collection="false" name="Default Prediction"/>
+                <input bomType="java.lang.Double" collection="false" name="LTV"/>
+                <input bomType="MortgageDefaultPrediction" collection="false" name="prediction result"/>
                 <input bomType="BusinessApetite" collection="false" name="Business apetite"/>
                 <input bomType="java.lang.Long" collection="false" name="Surplus"/>
                 <output bomType="MortgageApplication" collection="false" name="Mortgage application"/>
-                <rule defaultRule="false" href="node_1/Result%20mortgage%20application.dmt" kind="DecisionTable" name="Result mortgage application"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Mortgage application" typeRef="MortgageApplication"/>
+        <informationRequirement>
+            <requiredInput href="#node_27"/>
+        </informationRequirement>
         <informationRequirement>
             <requiredInput href="#node_25"/>
         </informationRequirement>
@@ -269,21 +272,38 @@
         </extensionElements>
         <variable id="node_24_ii" name="applicant details" typeRef="ApplicantDetails"/>
     </inputData>
-    <decision id="node_25" name="Default Prediction">
+    <decision id="node_25" name="prediction result">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="ApplicantDetails" collection="false" name="Update Applicant Score"/>
-                <output bomType="MortgageDefaultPrediction" collection="false" name="Default Prediction"/>
+                <output bomType="MortgageDefaultPrediction" collection="false" name="prediction result"/>
                 <rule defaultRule="false" href="node_25/Get%20prediction.drl" kind="BusinessRule" name="Get prediction"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_25_ii" name="Default Prediction" typeRef="MortgageDefaultPrediction"/>
+        <variable id="node_25_ii" name="prediction result" typeRef="MortgageDefaultPrediction"/>
         <informationRequirement>
             <requiredInput href="#node_23"/>
         </informationRequirement>
         <knowledgeRequirement>
             <requiredKnowledge href="#node_26"/>
         </knowledgeRequirement>
+    </decision>
+    <decision id="node_27" name="LTV">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Long" collection="false" name="Property value"/>
+                <input bomType="java.lang.Long" collection="false" name="Available deposit"/>
+                <output bomType="java.lang.Double" collection="false" name="LTV"/>
+                <rule defaultRule="false" href="node_27/LTV%20Calculation.drl" kind="BusinessRule" name="LTV Calculation"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_27_ii" name="LTV" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
     </decision>
     <businessKnowledgeModel id="node_26" name="Mortgage Default Predictor">
         <extensionElements>

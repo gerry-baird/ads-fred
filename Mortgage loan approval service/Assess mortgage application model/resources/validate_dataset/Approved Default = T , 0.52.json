@@ -1,7 +1,7 @@
 {
   "propertyValue": 270000,
   "floodRisk": false,
-  "availableDeposit": 70000,
+  "availableDeposit": 100000,
   "hazardousEnvironment": false,
   "businessApetite": "Normal",
   "creditScoreEquifax": "Fair",

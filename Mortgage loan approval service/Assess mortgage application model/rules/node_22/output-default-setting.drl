@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>output-default-setting</name>
-  <uuid>0043085d-f2ca-4d44-8fae-cf3386fcd82b</uuid>
-  <locale>en_US</locale>
-  <definition><![CDATA[set decision to 'Max possible purchase price' - 'Purchase price' ;]]></definition>
-</ilog.rules.studio.model.brl:ActionRule>

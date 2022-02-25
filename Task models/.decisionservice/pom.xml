@@ -2,28 +2,28 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cpadmin.gb_sandpit.mortgage_risk</groupId>
-        <artifactId>mortgageRisk</artifactId>
+        <groupId>cpadmin.gb_sandpit.task_models</groupId>
+        <artifactId>taskModels</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>mortgageRiskDecisionService</artifactId>
+    <artifactId>taskModelsDecisionService</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>cpadmin.gb_sandpit.mortgage_risk</groupId>
-            <artifactId>mortgageApproval</artifactId>
+            <groupId>decisions.education.decision_diagram</groupId>
+            <artifactId>data</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>cpadmin.gb_sandpit.mortgage_risk</groupId>
-            <artifactId>mortgageDefaultPredictor</artifactId>
+            <groupId>_082283706.sample_rule_flows.task_models</groupId>
+            <artifactId>example1-GoDinner</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>cpadmin.gb_sandpit.mortgage_risk</groupId>
-            <artifactId>mortgageModel</artifactId>
+            <groupId>_082283706.sample_rule_flows.task_models</groupId>
+            <artifactId>example2-GoDinnerWithSubflows</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -40,6 +40,25 @@
     </dependencies>
 
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -75,8 +94,8 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>cpadmin.gb_sandpit.mortgage_risk</groupId>
-                                    <artifactId>mortgageApproval</artifactId>
+                                    <groupId>decisions.education.decision_diagram</groupId>
+                                    <artifactId>data</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>
@@ -84,8 +103,8 @@
                                     <outputDirectory>${project.build.directory}/classes</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>cpadmin.gb_sandpit.mortgage_risk</groupId>
-                                    <artifactId>mortgageDefaultPredictor</artifactId>
+                                    <groupId>_082283706.sample_rule_flows.task_models</groupId>
+                                    <artifactId>example1-GoDinner</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>
@@ -93,8 +112,8 @@
                                     <outputDirectory>${project.build.directory}/classes</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>cpadmin.gb_sandpit.mortgage_risk</groupId>
-                                    <artifactId>mortgageModel</artifactId>
+                                    <groupId>_082283706.sample_rule_flows.task_models</groupId>
+                                    <artifactId>example2-GoDinnerWithSubflows</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>

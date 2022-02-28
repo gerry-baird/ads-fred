@@ -4,4 +4,13 @@
   <uuid>5206ec89-2666-4997-8585-10bff87ea28d</uuid>
   <decisionModel href="../rules/decisionModel.dmo#4a3aeeb1-82de-4453-bf31-88e0636a8331"/>
   <targetRuleProject href="../../Assess%20mortgage%20application%20model#d59edd26-59cb-4178-b132-c5c8a623f5a7"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["Assess-mortgage-application-model"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>

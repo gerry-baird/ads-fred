@@ -3,5 +3,5 @@
   <name>output-default-setting 01</name>
   <uuid>6d3439d1-d957-4618-af75-47010f27d93d</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[set decision to Surplus ;]]></definition>
+  <definition><![CDATA[set decision to Surplus + 999 ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

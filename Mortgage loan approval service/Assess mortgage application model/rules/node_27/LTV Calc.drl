@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>LTV Calc</name>
+  <uuid>6f039d7f-d347-487e-8ae3-5c22587727f1</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+	set 'MA' to 0.0 + ('Property value' - 'Available deposit' );
+    set 'APV' to 'Property value' ;
+then set decision to MA / APV ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

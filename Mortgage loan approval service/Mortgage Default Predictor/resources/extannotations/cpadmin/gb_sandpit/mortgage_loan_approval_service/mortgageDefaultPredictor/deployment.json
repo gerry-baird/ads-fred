@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "id" : "b10dc87f-ddae-4642-a7bf-e11d745f7c30",
+    "name" : "Mortgage Risk - P3 XGB Classifier",
+    "modified_at" : "2022-02-23T15:36:44.343Z",
+    "created_at" : "2022-02-23T15:36:44.343Z",
+    "owner" : "IBMid-27000280C5",
+    "space_id" : "31b44df7-2390-4375-88a2-65427c2faa6a"
+  },
+  "entity" : {
+    "name" : "Mortgage Risk - P3 XGB Classifier",
+    "space_id" : "31b44df7-2390-4375-88a2-65427c2faa6a",
+    "custom" : { },
+    "online" : { },
+    "status" : {
+      "state" : "ready",
+      "online_url" : {
+        "url" : "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/b10dc87f-ddae-4642-a7bf-e11d745f7c30/predictions"
+      }
+    },
+    "asset" : {
+      "id" : "47a6b4a9-25c0-4b50-8129-2a9ce5a58b15"
+    }
+  },
+  "name" : "Mortgage Risk - P3 XGB Classifier",
+  "status" : "ready",
+  "deployedAt" : "2022-02-23T15:36:44.343Z"
+}

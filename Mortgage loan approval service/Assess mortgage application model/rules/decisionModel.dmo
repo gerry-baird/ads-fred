@@ -16,6 +16,7 @@
                 <input bomType="java.lang.Long" collection="false" name="Surplus"/>
                 <output bomType="MortgageApplication" collection="false" name="Mortgage application"/>
                 <rule defaultRule="false" href="node_1/Mortgage%20Approval.dmt" kind="DecisionTable" name="Mortgage Approval"/>
+                <rule defaultRule="true" href="node_1/Otherwise%20Reject.drl" kind="BusinessRule" name="Otherwise Reject"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Mortgage application" typeRef="MortgageApplication"/>
@@ -304,6 +305,45 @@
         </informationRequirement>
         <informationRequirement>
             <requiredInput href="#node_8"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_28" name="Surplus Out">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Long" collection="false" name="Surplus"/>
+                <output bomType="java.lang.Long" collection="false" name="Surplus Out"/>
+                <rule defaultRule="true" href="node_28/output-default-setting%2001.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_28_ii" name="Surplus Out" typeRef="java.lang.Long"/>
+        <informationRequirement>
+            <requiredInput href="#node_22"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_29" name="Prediction Out">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="MortgageDefaultPrediction" collection="false" name="prediction result"/>
+                <output bomType="MortgageDefaultPrediction" collection="false" name="Prediction Out"/>
+                <rule defaultRule="true" href="node_29/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_29_ii" name="Prediction Out" typeRef="MortgageDefaultPrediction"/>
+        <informationRequirement>
+            <requiredInput href="#node_25"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_30" name="LTV Out">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="LTV"/>
+                <output bomType="java.lang.Double" collection="false" name="LTV Out"/>
+                <rule defaultRule="true" href="node_30/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_30_ii" name="LTV Out" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_27"/>
         </informationRequirement>
     </decision>
     <businessKnowledgeModel id="node_26" name="Mortgage Default Predictor">

@@ -1,5 +1,5 @@
 
-package cpadmin.gb_sandpit.mortgage_loan_approval_service.mortgageDefaultPredictor;
+package ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor;
 
 
 public class Error
@@ -69,7 +69,7 @@ public class Output
         }
         property "de.generated" "true"
 {
-    public cpadmin.gb_sandpit.mortgage_loan_approval_service.mortgageDefaultPredictor.Error error
+    public ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Error error
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "error";
     public java.lang.Long prediction
@@ -100,13 +100,13 @@ public class Output
     public void removeFrom_probability(java.lang.Double probability)
                 property collectionAttribute "probability"
                 property update "true";
-    public static Output run(cpadmin.gb_sandpit.mortgage_loan_approval_service.mortgageDefaultPredictor.Input input)
+    public static Output run(ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Input input)
                 property pureFunction "true";
-    public static Output run(com.ibm.decision.run.RunContext runContext, cpadmin.gb_sandpit.mortgage_loan_approval_service.mortgageDefaultPredictor.Input input)
+    public static Output run(com.ibm.decision.run.RunContext runContext, ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Input input)
                 property "de.generated" {
                     $gen "com.ibm.decision.ml.integration.xom.PredictionRunGenerator",
                     $target "BOM",
-                    providerInfoId "cpadmin/GB-Sandpit/GB ML Deployments1645192952195b10dc87f-ddae-4642-a7bf-e11d745f7c30"
+                    providerInfoId "ads/New-Mortgage-Approval-With-ML/GB Watson ML1647594932968b10dc87f-ddae-4642-a7bf-e11d745f7c30"
                 }
                 property pureFunction "true";
     public void set_probability(java.util.Collection probability domain 0,* class java.lang.Double)

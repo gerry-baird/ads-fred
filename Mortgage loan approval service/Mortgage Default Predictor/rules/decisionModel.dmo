@@ -10,40 +10,23 @@
     <inputData id="input" name="applicant">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="ApplicantDetails" collection="false" name="applicant"/>
+                <output bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ApplicantDetails" collection="false" name="applicant"/>
             </initialization>
         </extensionElements>
-        <variable id="input_ii" name="applicant" typeRef="ApplicantDetails"/>
+        <variable id="input_ii" name="applicant" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ApplicantDetails"/>
     </inputData>
     <decision id="input-mapping" name="Input mapping">
         <description>ML model input</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="ApplicantDetails" collection="false" name="applicant"/>
-                <output bomType="ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Input" collection="false" name="Input mapping"/>
+                <input bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ApplicantDetails" collection="false" name="applicant"/>
+                <output bomType="cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input" collection="false" name="Input mapping"/>
                 <rule defaultRule="false" href="input-mapping/Map%20Input%20Parameters.drl" kind="BusinessRule" name="Map Input Parameters"/>
             </ruleset>
         </extensionElements>
-        <variable id="input_mapping_ii" name="Input mapping" typeRef="ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Input"/>
+        <variable id="input_mapping_ii" name="Input mapping" typeRef="cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input"/>
         <informationRequirement>
             <requiredInput href="#input"/>
-        </informationRequirement>
-    </decision>
-    <decision id="output" name="ML model invocation">
-        <description>ML model output</description>
-        <extensionElements>
-            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Input" collection="false" name="Input mapping"/>
-                <output bomType="ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Output" collection="false" name="ML model invocation"/>
-                <rule defaultRule="false" href="decisionModel.drl" kind="BusinessRule" name="Prediction"/>
-            </ruleset>
-            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
-            </properties>
-        </extensionElements>
-        <variable id="output_ii" name="ML model invocation" typeRef="ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Output"/>
-        <informationRequirement>
-            <requiredInput href="#input-mapping"/>
         </informationRequirement>
     </decision>
     <decision id="output-mapping" name="Output mapping">
@@ -51,11 +34,11 @@
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.Double" collection="false" name="Probability"/>
                 <input bomType="java.lang.Boolean" collection="false" name="Prediction"/>
-                <output bomType="MortgageDefaultPrediction" collection="false" name="Output mapping"/>
+                <output bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageDefaultPrediction" collection="false" name="Output mapping"/>
                 <rule defaultRule="false" href="output-mapping/Output%20Mapping.drl" kind="BusinessRule" name="Output Mapping"/>
             </ruleset>
         </extensionElements>
-        <variable id="output_mapping_ii" name="Output mapping" typeRef="MortgageDefaultPrediction"/>
+        <variable id="output_mapping_ii" name="Output mapping" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageDefaultPrediction"/>
         <informationRequirement>
             <requiredInput href="#node_1"/>
         </informationRequirement>
@@ -66,27 +49,44 @@
     <decision id="node_1" name="Probability">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Output" collection="false" name="ML model invocation"/>
+                <input bomType="cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output" collection="false" name="ML model invocation"/>
                 <output bomType="java.lang.Double" collection="false" name="Probability"/>
                 <rule defaultRule="false" href="node_1/Max%20Probability.drl" kind="BusinessRule" name="Max Probability"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Probability" typeRef="java.lang.Double"/>
         <informationRequirement>
-            <requiredInput href="#output"/>
+            <requiredInput href="#prediction"/>
         </informationRequirement>
     </decision>
     <decision id="node_2" name="Prediction">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Output" collection="false" name="ML model invocation"/>
+                <input bomType="cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output" collection="false" name="ML model invocation"/>
                 <output bomType="java.lang.Boolean" collection="false" name="Prediction"/>
                 <rule defaultRule="false" href="node_2/Convert%20Prediction%20to%20Boolean.drl" kind="BusinessRule" name="Convert Prediction to Boolean"/>
             </ruleset>
         </extensionElements>
         <variable id="node_2_ii" name="Prediction" typeRef="java.lang.Boolean"/>
         <informationRequirement>
-            <requiredInput href="#output"/>
+            <requiredInput href="#prediction"/>
+        </informationRequirement>
+    </decision>
+    <decision id="prediction" name="ML model invocation">
+        <description>ML model output</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input" collection="false" name="Input mapping"/>
+                <output bomType="cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output" collection="false" name="ML model invocation"/>
+                <rule defaultRule="false" href="prediction/prediction.drl" kind="BusinessRule" name="Prediction"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="prediction_ii" name="ML model invocation" typeRef="cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output"/>
+        <informationRequirement>
+            <requiredInput href="#input-mapping"/>
         </informationRequirement>
     </decision>
 </definitions></definition>

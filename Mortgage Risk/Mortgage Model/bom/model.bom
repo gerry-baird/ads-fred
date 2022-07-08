@@ -1,4 +1,6 @@
 
+package cpadmin.gb_sandpit.mortgage_risk.mortgagemodel;
+
 
 public class ApplicantDetails
         property "ads.typeId" "2"

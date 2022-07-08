@@ -3,47 +3,38 @@
   "fields" : [ {
     "name" : "income",
     "type" : "integer",
-    "nullable" : true,
-    "jsonName" : "income"
+    "nullable" : true
   }, {
     "name" : "loan",
     "type" : "integer",
-    "nullable" : true,
-    "jsonName" : "loan"
+    "nullable" : true
   }, {
     "name" : "property_value",
     "type" : "integer",
-    "nullable" : true,
-    "jsonName" : "property_value"
+    "nullable" : true
   }, {
     "name" : "term",
     "type" : "integer",
-    "nullable" : true,
-    "jsonName" : "term"
+    "nullable" : true
   }, {
     "name" : "emp_length",
     "type" : "integer",
-    "nullable" : true,
-    "jsonName" : "emp_length"
+    "nullable" : true
   }, {
     "name" : "dependants",
     "type" : "integer",
-    "nullable" : true,
-    "jsonName" : "dependants"
+    "nullable" : true
   }, {
     "name" : "age",
     "type" : "integer",
-    "nullable" : true,
-    "jsonName" : "age"
+    "nullable" : true
   }, {
     "name" : "missed_payments",
     "type" : "integer",
-    "nullable" : true,
-    "jsonName" : "missed_payments"
+    "nullable" : true
   }, {
     "name" : "credit_score",
     "type" : "integer",
-    "nullable" : true,
-    "jsonName" : "credit_score"
+    "nullable" : true
   } ]
 }

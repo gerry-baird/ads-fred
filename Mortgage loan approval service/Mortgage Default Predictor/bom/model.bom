@@ -1,5 +1,5 @@
 
-package ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor;
+package cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor;
 
 
 public class Error
@@ -26,34 +26,34 @@ public class Input
         property "com.fasterxml.jackson.annotation.JsonPropertyOrder" "{income,loan,property_value,term,emp_length,dependants,age,missed_payments,credit_score}"
         property "de.generated" "true"
 {
-    public java.lang.Long age
+    public java.lang.Integer age
                 property "ads.attributeId" "7"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "age";
-    public java.lang.Long creditScore
+    public java.lang.Integer creditScore
                 property "ads.attributeId" "9"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "credit_score";
-    public java.lang.Long dependants
+    public java.lang.Integer dependants
                 property "ads.attributeId" "6"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "dependants";
-    public java.lang.Long empLength
+    public java.lang.Integer empLength
                 property "ads.attributeId" "5"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "emp_length";
-    public java.lang.Long income
+    public java.lang.Integer income
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "income";
-    public java.lang.Long loan
+    public java.lang.Integer loan
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "loan";
-    public java.lang.Long missedPayments
+    public java.lang.Integer missedPayments
                 property "ads.attributeId" "8"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "missed_payments";
-    public java.lang.Long propertyValue
+    public java.lang.Integer propertyValue
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "property_value";
-    public java.lang.Long term
+    public java.lang.Integer term
                 property "ads.attributeId" "4"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "term";
-    public Input(java.lang.Long age, java.lang.Long creditScore, java.lang.Long dependants, java.lang.Long empLength, java.lang.Long income, java.lang.Long loan, java.lang.Long missedPayments, java.lang.Long propertyValue, java.lang.Long term)
+    public Input(java.lang.Integer age, java.lang.Integer creditScore, java.lang.Integer dependants, java.lang.Integer empLength, java.lang.Integer income, java.lang.Integer loan, java.lang.Integer missedPayments, java.lang.Integer propertyValue, java.lang.Integer term)
                 property autoExpand "true"
                 property beanConstructor "true"
                 property groups "BALA"
@@ -69,16 +69,16 @@ public class Output
         }
         property "de.generated" "true"
 {
-    public ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Error error
+    public cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Error error
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "error";
-    public java.lang.Long prediction
+    public java.lang.Integer prediction
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "prediction";
     public java.util.List probability domain 0,* class java.lang.Double
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "probability";
-    public Output(java.lang.Long prediction, 
+    public Output(java.lang.Integer prediction, 
         java.util.List probability domain 0,* class java.lang.Double)
                 property autoExpand "true"
                 property beanConstructor "true"
@@ -100,13 +100,13 @@ public class Output
     public void removeFrom_probability(java.lang.Double probability)
                 property collectionAttribute "probability"
                 property update "true";
-    public static Output run(ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Input input)
+    public static Output run(cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input input)
                 property pureFunction "true";
-    public static Output run(com.ibm.decision.run.RunContext runContext, ads.new_mortgage_approval_with_ml.mortgage_loan_approval_service.mortgageDefaultPredictor.Input input)
+    public static Output run(com.ibm.decision.run.RunContext runContext, cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input input)
                 property "de.generated" {
                     $gen "com.ibm.decision.ml.integration.xom.PredictionRunGenerator",
                     $target "BOM",
-                    providerInfoId "ads/New-Mortgage-Approval-With-ML/GB Watson ML1647594932968b10dc87f-ddae-4642-a7bf-e11d745f7c30"
+                    providerInfoId "cp4admin/Mortgage/Watson ML1657277240059f2eac01f-95d9-4b39-9608-ff2cbe513f9a"
                 }
                 property pureFunction "true";
     public void set_probability(java.util.Collection probability domain 0,* class java.lang.Double)

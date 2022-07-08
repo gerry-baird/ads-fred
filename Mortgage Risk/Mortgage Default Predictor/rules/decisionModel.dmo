@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
   <name>Mortgage Default Predictor</name>
   <uuid>2aea830d-aed3-42d7-aabf-e950c3849a98</uuid>
   <locale>en_US</locale>
-  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="Decisions" name="mortgageDefaultPredictor" namespace="">
+  <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="Decisions" name="mortgageDefaultPredictor" namespace="">
     <extensionElements>
         <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
     </extensionElements>
@@ -67,7 +67,7 @@
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="cpadmin.gb_sandpit.mortgage_risk.mortgageDefaultPredictor.Input" collection="false" name="Input mapping"/>
                 <output bomType="cpadmin.gb_sandpit.mortgage_risk.mortgageDefaultPredictor.Output" collection="false" name="ML model invocation"/>
-                <rule defaultRule="false" href="decisionModel.drl" kind="BusinessRule" name="Prediction"/>
+                <rule defaultRule="false" href="output%2FdecisionModel.drl" kind="BusinessRule" name="Prediction"/>
             </ruleset>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
                 <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
@@ -83,11 +83,11 @@
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.Double" collection="false" name="Probability"/>
                 <input bomType="java.lang.Boolean" collection="false" name="Default Predicted"/>
-                <output bomType="MortgageDefaultPrediction" collection="false" name="Output mapping"/>
+                <output bomType="cpadmin.gb_sandpit.mortgage_risk.mortgagemodel.MortgageDefaultPrediction" collection="false" name="Output mapping"/>
                 <rule defaultRule="false" href="output-mapping/Output%20Mapping.drl" kind="BusinessRule" name="Output Mapping"/>
             </ruleset>
         </extensionElements>
-        <variable id="output_mapping_ii" name="Output mapping" typeRef="MortgageDefaultPrediction"/>
+        <variable id="output_mapping_ii" name="Output mapping" typeRef="cpadmin.gb_sandpit.mortgage_risk.mortgagemodel.MortgageDefaultPrediction"/>
         <informationRequirement>
             <requiredInput href="#node_10"/>
         </informationRequirement>
@@ -185,5 +185,6 @@
             <requiredInput href="#output"/>
         </informationRequirement>
     </decision>
-</definitions></definition>
+</definitions>
+    </definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>

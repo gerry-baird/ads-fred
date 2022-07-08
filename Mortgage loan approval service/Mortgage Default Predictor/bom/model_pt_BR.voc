@@ -1,0 +1,66 @@
+
+# cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Error
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Error#concept.label = Erro de saída
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = um novo {Erro de saída} no qual {0, código} {1, mensagem} 
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Error.code#phrase.action = atribuir o código {this,PARTITIVE_ARTICLE} a {código}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Error.code#phrase.navigation = {código} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Error.message#phrase.action = atribuir o mensagem {this,PARTITIVE_ARTICLE} a {mensagem}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Error.message#phrase.navigation = {mensagem} {this,PARTITIVE_ARTICLE}
+
+# cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input#concept.label = Entrada do modelo ML
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.Input(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)#phrase.navigation = um novo {Entrada do modelo ML} no qual {0, age} {1, credit score} {2, dependants} {3, emp length} {4, income} {5, loan} {6, missed payments} {7, property value} {8, term} 
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.age#phrase.action = atribuir o age {this,PARTITIVE_ARTICLE} a {age}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.age#phrase.addition_setter = adicionar {age} ao age {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.age#phrase.navigation = {age} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.age#phrase.subtraction_setter = subtrair {age} do age {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.creditScore#phrase.action = atribuir o credit score {this,PARTITIVE_ARTICLE} a {credit score}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.creditScore#phrase.addition_setter = adicionar {credit score} ao credit score {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.creditScore#phrase.navigation = {credit score} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.creditScore#phrase.subtraction_setter = subtrair {credit score} do credit score {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.dependants#phrase.action = atribuir o dependants {this,PARTITIVE_ARTICLE} a {dependants}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.dependants#phrase.addition_setter = adicionar {dependants} ao dependants {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.dependants#phrase.navigation = {dependants} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.dependants#phrase.subtraction_setter = subtrair {dependants} do dependants {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.empLength#phrase.action = atribuir o emp length {this,PARTITIVE_ARTICLE} a {emp length}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.empLength#phrase.addition_setter = adicionar {emp length} ao emp length {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.empLength#phrase.navigation = {emp length} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.empLength#phrase.subtraction_setter = subtrair {emp length} do emp length {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.income#phrase.action = atribuir o income {this,PARTITIVE_ARTICLE} a {income}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.income#phrase.addition_setter = adicionar {income} ao income {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.income#phrase.navigation = {income} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.income#phrase.subtraction_setter = subtrair {income} do income {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.loan#phrase.action = atribuir o loan {this,PARTITIVE_ARTICLE} a {loan}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.loan#phrase.addition_setter = adicionar {loan} ao loan {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.loan#phrase.navigation = {loan} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.loan#phrase.subtraction_setter = subtrair {loan} do loan {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.missedPayments#phrase.action = atribuir o missed payments {this,PARTITIVE_ARTICLE} a {missed payments}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.missedPayments#phrase.addition_setter = adicionar {missed payments} ao missed payments {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.missedPayments#phrase.navigation = {missed payments} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.missedPayments#phrase.subtraction_setter = subtrair {missed payments} do missed payments {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.propertyValue#phrase.action = atribuir o property value {this,PARTITIVE_ARTICLE} a {property value}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.propertyValue#phrase.addition_setter = adicionar {property value} ao property value {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.propertyValue#phrase.navigation = {property value} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.propertyValue#phrase.subtraction_setter = subtrair {property value} do property value {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.term#phrase.action = atribuir o term {this,PARTITIVE_ARTICLE} a {term}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.term#phrase.addition_setter = adicionar {term} ao term {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.term#phrase.navigation = {term} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input.term#phrase.subtraction_setter = subtrair {term} do term {this,PARTITIVE_ARTICLE}
+
+# cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output#concept.label = Saída do modelo ML
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.Output(java.lang.Integer,java.util.List)#phrase.navigation = um novo {Saída do modelo ML} no qual {0, prediction} {1, probability} 
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.addTo_probability(java.lang.Double)#phrase.action = adicionar {0} à lista uns probabilitys de {this}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.clear_probability()#phrase.action = limpar os probabilitys {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.error#phrase.action = atribuir o erro {this,PARTITIVE_ARTICLE} a {erro}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.error#phrase.clearer = limpar o erro {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.error#phrase.navigation = {erro} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.inError()#phrase.navigation = {this} é em erro
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.prediction#phrase.action = atribuir o prediction {this,PARTITIVE_ARTICLE} a {prediction}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.prediction#phrase.addition_setter = adicionar {prediction} ao prediction {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.prediction#phrase.navigation = {prediction} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.prediction#phrase.subtraction_setter = subtrair {prediction} do prediction {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.probability#phrase.action = atribuir os probabilitys {this,PARTITIVE_ARTICLE} a {probability}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.probability#phrase.navigation = {probability} {this,PARTITIVE_ARTICLE}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.removeFrom_probability(java.lang.Double)#phrase.action = remover {0} da lista uns probabilitys de {this}
+cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Output.run(cp4admin.mortgage.mortgage_loan_approval_service.mortgagedefaultpredictor.Input)#phrase.navigation = predict({0})

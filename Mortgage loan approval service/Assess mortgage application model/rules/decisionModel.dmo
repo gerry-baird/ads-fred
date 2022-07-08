@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
   <name>decisionModel</name>
   <uuid>4a3aeeb1-82de-4453-bf31-88e0636a8331</uuid>
   <locale>en_US</locale>
-  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+  <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
     <extensionElements>
         <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
     </extensionElements>
@@ -11,15 +11,15 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.Double" collection="false" name="LTV"/>
-                <input bomType="MortgageDefaultPrediction" collection="false" name="prediction result"/>
-                <input bomType="BusinessApetite" collection="false" name="Business apetite"/>
+                <input bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageDefaultPrediction" collection="false" name="prediction result"/>
+                <input bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.BusinessApetite" collection="false" name="Business apetite"/>
                 <input bomType="java.lang.Long" collection="false" name="Surplus"/>
-                <output bomType="MortgageApplication" collection="false" name="Mortgage application"/>
+                <output bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageApplication" collection="false" name="Mortgage application"/>
                 <rule defaultRule="false" href="node_1/Mortgage%20Approval.dmt" kind="DecisionTable" name="Mortgage Approval"/>
                 <rule defaultRule="true" href="node_1/Otherwise%20Reject.drl" kind="BusinessRule" name="Otherwise Reject"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Mortgage application" typeRef="MortgageApplication"/>
+        <variable id="node_1_ii" name="Mortgage application" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageApplication"/>
         <informationRequirement>
             <requiredInput href="#node_27"/>
         </informationRequirement>
@@ -53,7 +53,7 @@
     <decision id="node_3" name="Max loan based on financials">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="EmploymentType" collection="false" name="Employment type"/>
+                <input bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EmploymentType" collection="false" name="Employment type"/>
                 <input bomType="java.lang.Long" collection="false" name="Adjusted max affordable loan"/>
                 <output bomType="java.lang.Long" collection="false" name="Max loan based on financials"/>
                 <rule defaultRule="false" href="node_3/Max%20loan%20based%20on%20financials.dmt" kind="DecisionTable" name="Max loan based on financials"/>
@@ -149,24 +149,24 @@
     <inputData id="node_13" name="Business apetite">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="BusinessApetite" collection="false" name="Business apetite"/>
+                <output bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.BusinessApetite" collection="false" name="Business apetite"/>
             </initialization>
         </extensionElements>
-        <variable id="node_13_ii" name="Business apetite" typeRef="BusinessApetite"/>
+        <variable id="node_13_ii" name="Business apetite" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.BusinessApetite"/>
     </inputData>
     <inputData id="node_14" name="Credit score Equifax">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="EquifaxScore" collection="false" name="Credit score Equifax"/>
+                <output bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EquifaxScore" collection="false" name="Credit score Equifax"/>
             </initialization>
         </extensionElements>
-        <variable id="node_14_ii" name="Credit score Equifax" typeRef="EquifaxScore"/>
+        <variable id="node_14_ii" name="Credit score Equifax" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EquifaxScore"/>
     </inputData>
     <decision id="node_16" name="Credit score result">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
-                <input bomType="ExperianScore" collection="false" name="Credit score Experian"/>
-                <input bomType="EquifaxScore" collection="false" name="Credit score Equifax"/>
+                <input bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ExperianScore" collection="false" name="Credit score Experian"/>
+                <input bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EquifaxScore" collection="false" name="Credit score Equifax"/>
                 <output bomType="java.lang.Double" collection="false" name="Credit score result"/>
                 <rule defaultRule="false" href="node_16/Credit%20score%20result.dmt" kind="DecisionTable" name="Credit score result"/>
             </ruleset>
@@ -182,18 +182,18 @@
     <inputData id="node_17" name="Credit score Experian">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="ExperianScore" collection="false" name="Credit score Experian"/>
+                <output bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ExperianScore" collection="false" name="Credit score Experian"/>
             </initialization>
         </extensionElements>
-        <variable id="node_17_ii" name="Credit score Experian" typeRef="ExperianScore"/>
+        <variable id="node_17_ii" name="Credit score Experian" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ExperianScore"/>
     </inputData>
     <inputData id="node_18" name="Employment type">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="EmploymentType" collection="false" name="Employment type"/>
+                <output bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EmploymentType" collection="false" name="Employment type"/>
             </initialization>
         </extensionElements>
-        <variable id="node_18_ii" name="Employment type" typeRef="EmploymentType"/>
+        <variable id="node_18_ii" name="Employment type" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EmploymentType"/>
     </inputData>
     <inputData id="node_19" name="Gross yearly income">
         <extensionElements>
@@ -253,12 +253,12 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.Double" collection="false" name="Credit score result"/>
-                <input bomType="ApplicantDetails" collection="false" name="applicant details"/>
-                <output bomType="ApplicantDetails" collection="false" name="Update Applicant Score"/>
+                <input bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ApplicantDetails" collection="false" name="applicant details"/>
+                <output bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ApplicantDetails" collection="false" name="Update Applicant Score"/>
                 <rule defaultRule="false" href="node_23/Update%20Credit%20Score.drl" kind="BusinessRule" name="Update Credit Score"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_23_ii" name="Update Applicant Score" typeRef="ApplicantDetails"/>
+        <variable id="node_23_ii" name="Update Applicant Score" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ApplicantDetails"/>
         <informationRequirement>
             <requiredInput href="#node_16"/>
         </informationRequirement>
@@ -269,20 +269,20 @@
     <inputData id="node_24" name="applicant details">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="ApplicantDetails" collection="false" name="applicant details"/>
+                <output bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ApplicantDetails" collection="false" name="applicant details"/>
             </initialization>
         </extensionElements>
-        <variable id="node_24_ii" name="applicant details" typeRef="ApplicantDetails"/>
+        <variable id="node_24_ii" name="applicant details" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ApplicantDetails"/>
     </inputData>
     <decision id="node_25" name="prediction result">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="ApplicantDetails" collection="false" name="Update Applicant Score"/>
-                <output bomType="MortgageDefaultPrediction" collection="false" name="prediction result"/>
+                <input bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ApplicantDetails" collection="false" name="Update Applicant Score"/>
+                <output bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageDefaultPrediction" collection="false" name="prediction result"/>
                 <rule defaultRule="false" href="node_25/Get%20prediction.drl" kind="BusinessRule" name="Get prediction"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_25_ii" name="prediction result" typeRef="MortgageDefaultPrediction"/>
+        <variable id="node_25_ii" name="prediction result" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageDefaultPrediction"/>
         <informationRequirement>
             <requiredInput href="#node_23"/>
         </informationRequirement>
@@ -323,12 +323,12 @@
     <decision id="node_29" name="Prediction Out">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="MortgageDefaultPrediction" collection="false" name="prediction result"/>
-                <output bomType="MortgageDefaultPrediction" collection="false" name="Prediction Out"/>
+                <input bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageDefaultPrediction" collection="false" name="prediction result"/>
+                <output bomType="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageDefaultPrediction" collection="false" name="Prediction Out"/>
                 <rule defaultRule="true" href="node_29/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_29_ii" name="Prediction Out" typeRef="MortgageDefaultPrediction"/>
+        <variable id="node_29_ii" name="Prediction Out" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageDefaultPrediction"/>
         <informationRequirement>
             <requiredInput href="#node_25"/>
         </informationRequirement>
@@ -352,9 +352,9 @@
                 <property name="ads.designer.bkKind"><![CDATA[prediction]]></property>
             </properties>
         </extensionElements>
-        <variable name="Mortgage Default Predictor" typeRef="MortgageDefaultPrediction"/>
-        <encapsulatedLogic typeRef="MortgageDefaultPrediction">
-            <formalParameter name="applicant" typeRef="ApplicantDetails"/>
+        <variable name="Mortgage Default Predictor" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageDefaultPrediction"/>
+        <encapsulatedLogic typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageDefaultPrediction">
+            <formalParameter name="applicant" typeRef="decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ApplicantDetails"/>
             <context>
                 <contextEntry>
                     <variable name="class"/>
@@ -365,11 +365,12 @@
                 <contextEntry>
                     <variable name="method signature"/>
                     <literalExpression>
-                        <text>"run(ApplicantDetails)"</text>
+                        <text>"run(decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ApplicantDetails)"</text>
                     </literalExpression>
                 </contextEntry>
             </context>
         </encapsulatedLogic>
     </businessKnowledgeModel>
-</definitions></definition>
+</definitions>
+    </definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>

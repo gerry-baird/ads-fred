@@ -1,0 +1,29 @@
+{
+  "metadata" : {
+    "id" : "f2eac01f-95d9-4b39-9608-ff2cbe513f9a",
+    "name" : "Mortgage Risk - P3 Gradient Boosting Classifier 8 Jul 2022",
+    "modified_at" : "2022-07-08T12:00:04.062Z",
+    "created_at" : "2022-07-08T12:00:04.062Z",
+    "owner" : "IBMid-27000280C5",
+    "space_id" : "31b44df7-2390-4375-88a2-65427c2faa6a"
+  },
+  "entity" : {
+    "name" : "Mortgage Risk - P3 Gradient Boosting Classifier 8 Jul 2022",
+    "space_id" : "31b44df7-2390-4375-88a2-65427c2faa6a",
+    "custom" : { },
+    "online" : { },
+    "status" : {
+      "state" : "ready",
+      "online_url" : {
+        "url" : "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/f2eac01f-95d9-4b39-9608-ff2cbe513f9a/predictions"
+      },
+      "serving_urls" : [ "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/f2eac01f-95d9-4b39-9608-ff2cbe513f9a/predictions" ]
+    },
+    "asset" : {
+      "id" : "accbac1e-cadc-4876-85ac-283f5ebf7538"
+    }
+  },
+  "name" : "Mortgage Risk - P3 Gradient Boosting Classifier 8 Jul 2022",
+  "status" : "ready",
+  "deployedAt" : "2022-07-08T12:00:04.062Z"
+}

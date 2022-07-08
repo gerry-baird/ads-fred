@@ -1,4 +1,6 @@
 
+package decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication;
+
 
 public class ApplicantDetails
         property "ads.typeId" "6"
@@ -57,13 +59,13 @@ public class BusinessApetite
         property "de.generated" "true"
 {
     domain {static high, static low, static normal}
-    public static final readonly BusinessApetite high
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.BusinessApetite high
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "High";
-    public static final readonly BusinessApetite low
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.BusinessApetite low
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Low";
-    public static final readonly BusinessApetite normal
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.BusinessApetite normal
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Normal";
 }
@@ -75,16 +77,16 @@ public class EmploymentType
         property "de.generated" "true"
 {
     domain {static freelance, static full$timeEmployment, static part$timeEmployment, static temporaryEmployment}
-    public static final readonly EmploymentType freelance
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EmploymentType freelance
                 property "ads.attributeId" "5"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Freelance";
-    public static final readonly EmploymentType full$timeEmployment
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EmploymentType full$timeEmployment
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Full-time employment";
-    public static final readonly EmploymentType part$timeEmployment
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EmploymentType part$timeEmployment
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Part-time employment";
-    public static final readonly EmploymentType temporaryEmployment
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EmploymentType temporaryEmployment
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Temporary employment";
 }
@@ -96,19 +98,19 @@ public class EquifaxScore
         property "de.generated" "true"
 {
     domain {static excellent, static fair, static good, static poor, static veryGood}
-    public static final readonly EquifaxScore excellent
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EquifaxScore excellent
                 property "ads.attributeId" "5"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Excellent";
-    public static final readonly EquifaxScore fair
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EquifaxScore fair
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Fair";
-    public static final readonly EquifaxScore good
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EquifaxScore good
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Good";
-    public static final readonly EquifaxScore poor
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EquifaxScore poor
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Poor";
-    public static final readonly EquifaxScore veryGood
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.EquifaxScore veryGood
                 property "ads.attributeId" "4"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Very good";
 }
@@ -120,19 +122,19 @@ public class ExperianScore
         property "de.generated" "true"
 {
     domain {static excellent, static fair, static good, static poor, static veryPoor}
-    public static final readonly ExperianScore excellent
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ExperianScore excellent
                 property "ads.attributeId" "5"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Excellent";
-    public static final readonly ExperianScore fair
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ExperianScore fair
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Fair";
-    public static final readonly ExperianScore good
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ExperianScore good
                 property "ads.attributeId" "4"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Good";
-    public static final readonly ExperianScore poor
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ExperianScore poor
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Poor";
-    public static final readonly ExperianScore veryPoor
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.ExperianScore veryPoor
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Very poor";
 }
@@ -144,10 +146,10 @@ public class MortgageApplication
         property "de.generated" "true"
 {
     domain {static accepted, static rejected}
-    public static final readonly MortgageApplication accepted
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageApplication accepted
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Accepted";
-    public static final readonly MortgageApplication rejected
+    public static final readonly decisions.mortgage_loan_approval.mortgage_loan_approval_service.mortgageapplication.MortgageApplication rejected
                 property "ads.attributeId" "2"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "Rejected";
 }

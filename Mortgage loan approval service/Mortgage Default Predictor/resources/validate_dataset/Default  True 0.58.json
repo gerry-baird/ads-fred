@@ -1,0 +1,1 @@
+{"operationId":"1a50276f-4778-4180-ba43-2d87bbaa54e5","body":"{\n  \"applicant\": {\n    \"age\": 30,\n    \"creditScore\": 200,\n    \"dependants\": 0,\n    \"empLength\": 6,\n    \"income\": 40000,\n    \"loan\": 120000,\n    \"missedPayments\": 5,\n    \"propertyValue\": 130000,\n    \"term\": 120\n  }\n}"}

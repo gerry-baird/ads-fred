@@ -1,1 +1,6 @@
-{"description":"Assess the mortgage application.","locale":"en_US","properties":{}}
+{
+  "description" : "Assess the mortgage application.",
+  "locale" : "en_US",
+  "properties" : { },
+  "groupId" : "cp4admin.mortgage.mortgage_loan_approval_service"
+}

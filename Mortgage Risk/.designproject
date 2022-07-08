@@ -1,6 +1,0 @@
-{
-  "description" : "Simple DS to test ML model.",
-  "locale" : "en_US",
-  "properties" : { },
-  "groupId" : "cp4admin.mortgage.mortgage_risk"
-}

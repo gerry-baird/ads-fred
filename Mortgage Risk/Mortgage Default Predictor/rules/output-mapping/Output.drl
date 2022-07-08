@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>Output</name>
-  <uuid>02c8b5c3-76f0-49e9-b190-192114a1ca40</uuid>
-  <locale>en_US</locale>
-  <definition><![CDATA[set decision to a new ML model output where
-		the prediction is <prediction>, 
-		the probabilities are <probability> ;]]></definition>
-</ilog.rules.studio.model.brl:ActionRule>
